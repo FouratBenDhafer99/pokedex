@@ -1,0 +1,9 @@
+.pokemonList{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  column-gap: 2em;
+  row-gap: 1em;
+}

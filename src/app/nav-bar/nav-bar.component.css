@@ -1,0 +1,19 @@
+.parent{
+  display: flex;
+  justify-content: center;
+  margin: 20px ;
+}
+
+.myNavbar{
+  padding: 50px;
+  justify-content: space-between;
+  margin-bottom: 40px;
+
+  width: 70em;
+
+  border-radius: 100px;
+}
+
+.spacer {
+  margin-left: 1.5rem;
+}
