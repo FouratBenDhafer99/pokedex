@@ -3,6 +3,8 @@ import {PokemonService} from "../services/PokemonService";
 import {NamedAPIResource, NamedAPIResourceList} from "../models/APIResource";
 import {Pokemon} from "../models/Pokemon";
 import {TypeService} from "../services/TypeService";
+import {Type} from "../models/Type";
+import {Types} from "../constants/Types";
 
 @Component({
   selector: 'app-pokemon-list',
@@ -41,6 +43,12 @@ export class PokemonListComponent implements OnInit {
   getPokemonDetails(pokemonAPI: NamedAPIResource): void{
     this.pokeService.getPokemonByName(pokemonAPI.name)
       .then((res: Pokemon)=>{
+        let types= []
+        for (let type of res.types) {
+          // @ts-ignore
+          types.push(Types[type.type.name])
+        }
+        res.types= types
         this.pokemons.push(res)
       })
       .then(noth=> this.pokemons.sort((a,b)=> {return a.id - b.id}))

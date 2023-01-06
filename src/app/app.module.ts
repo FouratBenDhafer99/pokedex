@@ -11,14 +11,16 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import {HttpClientModule} from "@angular/common/http";
-import { PokemonListBoxComponent } from './pokemon-list-box/pokemon-list-box.component';
+import { PokemonListItemComponent } from './pokemon-list-box/pokemon-list-item.component';
+import {PokemonDetailsComponent} from "./pokemon-details/pokemon-details.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     PokemonListComponent,
-    PokemonListBoxComponent
+    PokemonListItemComponent,
+    PokemonDetailsComponent
   ],
     imports: [
       BrowserModule,

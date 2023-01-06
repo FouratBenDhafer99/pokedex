@@ -1,18 +1,20 @@
-.parent {
+.parent{
   display: flex;
   justify-content: center;
 }
 
-.myNavbar {
+.myNavbar{
   padding: 50px;
   justify-content: space-between;
   margin-bottom: 40px;
-}
-.myNavbar img {
-  width: 70px;
+
+  img{
+    width: 70px;
+  }
+
 }
 
-.brand {
+.brand{
   font-weight: bold;
   font-size: 30px;
 }
@@ -20,5 +22,3 @@
 .spacer {
   margin-left: 1.5rem;
 }
-
-/*# sourceMappingURL=nav-bar.component.css.map */

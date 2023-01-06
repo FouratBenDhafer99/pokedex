@@ -1,0 +1,14 @@
+
+<div class="pokemonBox" [style.background-color]="getTypeBackgroundColor(pokemon.types[0].name)" (click)="openDialog()">
+  <h6><span class="">#{{pokemon.id}}</span> {{pokemon.name}}</h6>
+  <img src="{{pokemon.sprites.versions['generation-v']['black-white'].animated.front_default}}">
+
+
+  <div class="types">
+    <div class="type" *ngFor="let type of pokemon.types" [style.background-color]="getTypeBadgeColor(type.name)">
+      {{type.name}}
+    </div>
+
+  </div>
+
+</div>

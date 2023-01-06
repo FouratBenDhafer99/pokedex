@@ -22,7 +22,7 @@ export class PokemonService{
    */
   public getPokemonList(limit?: number, offset?: number): Promise<NamedAPIResourceList>{
     return new Promise<NamedAPIResourceList>(async (resolve, reject) => {
-      await axios.get<NamedAPIResourceList>(BaseUrl.REST + Endpoints.POKEMON+"?limit="+(limit || Utility.PAGE_LIMIT)+"&offset="+(offset || 0))
+      await axios.get<NamedAPIResourceList>(BaseUrl.REST + Endpoints.POKEMON+"?limit="+(limit || Utility.PAGE_LIMIT)+"&offset="+(offset || Utility.OFFSET))
         .then((res: AxiosResponse<NamedAPIResourceList>) => resolve(res.data))
         .catch((error: AxiosError<string>) => reject(error));
     })
